@@ -1,0 +1,24 @@
+# ============================================================
+# Bot A（主协调人）配置模板
+# ============================================================
+# 使用方式：HERMES_HOME=~/.hermes-bot-a hermes gateway start
+
+feishu:
+  allow_bots: mentions       # 接受 @ 自己的其他 Bot 消息
+  require_mention: true       # 群聊中需要 @ 才响应
+  group_policy: open          # open | allowlist | disabled
+
+gateway:
+  enabled: true
+
+# Bot-to-Bot 角色标识（自定义，注入系统提示词）
+a2a:
+  role: leader                # leader | executor
+  name: "小马"                # Bot 显示名
+  peers:                      # 对端 Bot 列表
+    - name: "小牛"
+      open_id: "ou_yyyyyyyyyyyyyyyyyyyyyyyy"
+
+# 可选：显示设置
+display:
+  skin: default

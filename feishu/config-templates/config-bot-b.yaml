@@ -1,0 +1,22 @@
+# ============================================================
+# Bot B（执行者）配置模板
+# ============================================================
+# 使用方式：HERMES_HOME=~/.hermes-bot-b hermes gateway start
+
+feishu:
+  allow_bots: mentions
+  require_mention: true
+  group_policy: open
+
+gateway:
+  enabled: true
+
+a2a:
+  role: executor
+  name: "小牛"
+  peers:
+    - name: "小马"
+      open_id: "ou_xxxxxxxxxxxxxxxxxxxxxxxx"
+
+display:
+  skin: default
