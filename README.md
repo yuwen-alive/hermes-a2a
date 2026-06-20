@@ -158,6 +158,39 @@ HERMES_HOME=~/.hermes-bot-a hermes gateway start
 HERMES_HOME=~/.hermes-bot-b hermes gateway start
 ```
 
+### Examples
+
+| Example | Description | Signals Used |
+|---------|-------------|-------------|
+| [Basic Collaboration](examples/basic-collaboration/) | Build two Bots from scratch | `[CONTINUE]` `[DONE]` |
+| [Token Monitor](examples/token-monitor/) | Cross-machine Token usage Dashboard | `[INFO]` `[DONE]` |
+| [Inbox System](examples/inbox-system/) | Offline messaging between Bots | `[CONTINUE]` `[INFO]` `[DONE]` |
+
+### Project Structure
+
+```
+hermes-a2a/
+├── README.md
+├── LICENSE
+├── ROADMAP.md
+├── protocol/           # Protocol specs (spec, rules, anti-loop)
+├── docs/               # Architecture, troubleshooting, collaboration guide
+├── feishu/             # Feishu integration (setup, bot identity, config templates)
+├── skills/             # Hermes Skill package
+└── examples/           # Real-world examples
+```
+
+### Documentation
+
+| I want to... | Go to |
+|--------------|-------|
+| Set up Feishu Bot-to-Bot from scratch | [feishu/setup-guide.md](feishu/setup-guide.md) |
+| Read the protocol spec | [protocol/spec.md](protocol/spec.md) |
+| Understand anti-loop mechanisms | [protocol/anti-loop.md](protocol/anti-loop.md) |
+| See common pitfalls | [docs/troubleshooting.md](docs/troubleshooting.md) |
+| Learn about multi-Agent architecture | [docs/architecture.md](docs/architecture.md) |
+| Install the Skill package | [skills/hermes-a2a/SKILL.md](skills/hermes-a2a/SKILL.md) |
+
 ### License
 
 [MIT](LICENSE)
