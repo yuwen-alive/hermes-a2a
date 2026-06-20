@@ -21,19 +21,13 @@
 - [x] 配置模板 (.env.example, config-bot-a/b.yaml)
 - [x] 协作行为准则 (docs/collaboration-guide.md)
 - [x] Skill 包 (skills/hermes-a2a/SKILL.md)
-
-### 待完成
-
-- [ ] 实战案例 (examples/)
-  - [ ] 双 Bot 基础协作教程
-  - [ ] Token Monitor 实战案例
-  - [ ] 信箱系统案例
-- [ ] README 最终版 (合并双方内容)
-- [ ] GitHub 仓库创建与上传
+- [x] 实战案例 (examples/) — basic-collaboration / token-monitor / inbox-system
+- [x] README 最终版 (中英双语完整)
+- [x] GitHub 仓库创建与上传
 
 ---
 
-## V1.1 -- 协作信号增强
+## V1.1
 
 **阶段**: Phase 2（V1 稳定后）
 
