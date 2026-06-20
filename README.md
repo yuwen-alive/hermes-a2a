@@ -65,7 +65,7 @@ HERMES_HOME=~/.hermes-bot-b hermes gateway start
 
 | 案例 | 描述 | 涉及信号 |
 |------|------|---------|
-| [基础双 Bot 教程](examples/basic-2bot/) | 从零搭建两个 Bot 协作 | `[CONTINUE]` `[DONE]` |
+| [基础双 Bot 教程](examples/basic-collaboration/) | 从零搭建两个 Bot 协作 | `[CONTINUE]` `[DONE]` |
 | [Token 监控](examples/token-monitor/) | 跨机器 Token 用量 Dashboard | `[INFO]` `[DONE]` |
 | [信箱系统](examples/inbox-system/) | Bot 间离线消息信箱 | `[CONTINUE]` `[INFO]` `[DONE]` |
 
@@ -105,7 +105,7 @@ hermes-a2a/
 │       └── templates/                 # 消息模板
 │
 └── examples/                          # 实战案例
-    ├── basic-2bot/                    # 双 Bot 基础教程
+    ├── basic-collaboration/                    # 双 Bot 基础教程
     ├── token-monitor/                 # Token 监控案例
     └── inbox-system/                  # 信箱系统案例
 ```
