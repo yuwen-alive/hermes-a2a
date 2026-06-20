@@ -11,11 +11,13 @@ feishu:
 gateway:
   enabled: true
 
+# ⚠️ 以下 a2a.* 字段不是 Hermes 原生配置，仅供 hermes-a2a skill 读取。
+# 如果不使用 skill，可以删除此段，改为手动在系统提示词中写明角色。
 a2a:
   role: executor
-  name: "小牛"
+  name: "Bot B"
   peers:
-    - name: "小马"
+    - name: "Bot A"
       open_id: "ou_xxxxxxxxxxxxxxxxxxxxxxxx"
 
 display:

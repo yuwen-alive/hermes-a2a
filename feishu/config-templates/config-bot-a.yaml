@@ -11,12 +11,14 @@ feishu:
 gateway:
   enabled: true
 
-# Bot-to-Bot 角色标识（自定义，注入系统提示词）
+# ⚠️ 以下 a2a.* 字段不是 Hermes 原生配置，仅供 hermes-a2a skill 读取。
+# skill 会根据这些值自动注入协作角色和 peer 信息到系统提示词中。
+# 如果不使用 skill，可以删除此段，改为手动在系统提示词中写明角色。
 a2a:
   role: leader                # leader | executor
-  name: "小马"                # Bot 显示名
+  name: "Bot A"                # Bot 显示名
   peers:                      # 对端 Bot 列表
-    - name: "小牛"
+    - name: "Bot B"
       open_id: "ou_yyyyyyyyyyyyyyyyyyyyyyyy"
 
 # 可选：显示设置

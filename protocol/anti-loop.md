@@ -140,10 +140,10 @@ Agent B → Agent A: (API timeout again)
 > From production logs — two Hermes bots in the same Feishu group:
 
 ```
-[16:55] 小牛 → 小马: "我来分析这段代码" (no signal tag)
-[16:55] 小马 → 小牛: "好的我也看看" (no signal tag)
-[16:55] 小牛 → 小马: "分析结果..." (no signal tag)  
-[16:55] 小马 → 小牛: "我的分析..." (no signal tag)
+[16:55] Agent A → Agent B: "我来分析这段代码" (no signal tag)
+[16:55] Agent B → Agent A: "好的我也看看" (no signal tag)
+[16:55] Agent A → Agent B: "分析结果..." (no signal tag)  
+[16:55] Agent B → Agent A: "我的分析..." (no signal tag)
 [16:55] API 429: quota exhausted (both bots hit rate limit)
 [16:55] Both bots fail simultaneously
 ```
@@ -152,10 +152,10 @@ Agent B → Agent A: (API timeout again)
 
 **With A2A protocol**:
 ```
-[16:55] 小牛 → 小马: "我来分析这段代码" [CONTINUE]
-[16:55] 小马 → 小牛: (sees [CONTINUE], waits for result)
-[16:55] 小牛 → 小马: "分析结果：..." [DONE]
-[16:55] 小马 → 小牛: (sees [DONE], does NOT reply)
+[16:55] Agent A → Agent B: "我来分析这段代码" [CONTINUE]
+[16:55] Agent B → Agent A: (sees [CONTINUE], waits for result)
+[16:55] Agent A → Agent B: "分析结果：..." [DONE]
+[16:55] Agent B → Agent A: (sees [DONE], does NOT reply)
 → Conversation ends cleanly, no wasted tokens
 ```
 

@@ -37,8 +37,8 @@ FEISHU_BOT_OPEN_ID=ou_xxxxxxxxxxxxxxxx
 **症状**: 用户 @all 或者不明确 @ 某个 Bot，导致两个 Bot 同时处理同一个任务，同时撞 API 限流。
 
 **真实案例**:
-- 小马: `Rate limited. Waiting 5.9s (attempt 3/3)...` -> HTTP 429
-- 小牛: `Rate limited. Waiting 2.3s (attempt 2/3)...` -> HTTP 429
+- Agent A: `Rate limited. Waiting 5.9s (attempt 3/3)...` -> HTTP 429
+- Agent B: `Rate limited. Waiting 2.3s (attempt 2/3)...` -> HTTP 429
 - 两个人同时冲，同时撞墙，配额耗尽
 
 **根因**: 没有 Turn 控制机制，多个 Bot 可以同时处理同一个任务。

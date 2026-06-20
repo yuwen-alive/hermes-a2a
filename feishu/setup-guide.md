@@ -12,7 +12,7 @@
 
 ## 第一步：创建两个飞书应用
 
-### 应用 A（主协调人，如"小马"）
+### 应用 A（主协调人，如"Bot A"）
 
 1. 打开 [飞书开放平台](https://open.feishu.cn/app)
 2. 创建自建应用 → 获取 `App ID` 和 `App Secret`
@@ -26,7 +26,7 @@
    - `im.message.receive_v1` — 接收消息
 6. 发布应用 → 审核通过
 
-### 应用 B（执行者，如"小牛"）
+### 应用 B（执行者，如"Bot B"）
 
 重复上述步骤，使用**不同的** App ID / App Secret。
 
@@ -39,14 +39,14 @@
 每个 Bot 运行独立的 Hermes 实例，使用不同的配置目录。
 
 ```
-# Bot A（小马）
+# Bot A
 ~/.hermes-bot-a/
 ├── config.yaml
 ├── .env              # App A 的凭证
 ├── skills/
 └── sessions/
 
-# Bot B（小牛）
+# Bot B
 ~/.hermes-bot-b/
 ├── config.yaml
 ├── .env              # App B 的凭证
@@ -155,7 +155,23 @@ tail -f ~/.hermes/logs/gateway.log | grep bot_open_id
 
 ---
 
-## 第五步：启动并验证
+## 第五步：安装 A2A 协作 Skill（让 Bot 遵守协议）
+
+仅配置飞书连接还不够——Bot 需要知道协作规则（信号标签、防死循环等）。最简单的方式是安装 `hermes-a2a` skill：
+
+```bash
+# 将 skill 复制到每个 Bot 的 skills 目录
+cp -r skills/hermes-a2a/ ~/.hermes-bot-a/skills/hermes-a2a/
+cp -r skills/hermes-a2a/ ~/.hermes-bot-b/skills/hermes-a2a/
+```
+
+安装后，当 Bot 检测到需要与其他 Bot 协作时，会自动加载协议规则。
+
+> **手动方式**：如果不使用 skill，可以将 [protocol/rules.md](../protocol/rules.md) 中的「System Prompt Template」手动追加到每个 Bot 的系统提示词中。
+
+---
+
+## 第六步：启动并验证
 
 ```bash
 # 终端 1：启动 Bot A

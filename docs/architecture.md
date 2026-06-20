@@ -8,7 +8,7 @@
 
 ```
 +---------+    飞书群     +---------+
-|  小马 🐴 | <----------> |  小牛 🐮 |
+|  Bot A | <----------> |  Bot B |
 |  Leader  |   @mention   | Executor |
 +---------+              +---------+
      ^                        ^
@@ -73,23 +73,23 @@
 ```yaml
 # 注册表结构 (可存储在文件/数据库/内存中)
 agents:
-  - id: "agent-xiaoma"
-    name: "小马"
+  - id: "agent-alpha"
+    name: "Bot A"
     role: leader
     platform: feishu
     capabilities: ["task-planning", "reporting", "coordination"]
     status: online
     last_heartbeat: "2026-06-20T12:00:00Z"
-    peer_ids: ["agent-xiaoniu"]
+    peer_ids: ["agent-beta"]
 
-  - id: "agent-xiaoniu"
-    name: "小牛"
+  - id: "agent-beta"
+    name: "Bot B"
     role: executor
     platform: feishu
     capabilities: ["server-ops", "data-query", "code-execution"]
     status: online
     last_heartbeat: "2026-06-20T12:00:00Z"
-    peer_ids: ["agent-xiaoma"]
+    peer_ids: ["agent-alpha"]
 ```
 
 ### 2.2 消息路由 (Message Router)
@@ -113,10 +113,10 @@ agents:
 ### 2.4 任务分发协议
 
 ```
-用户 -> Leader: @小马 帮我分析服务器状态和今天的 API 用量
+用户 -> Leader: @Bot-A 帮我分析服务器状态和今天的 API 用量
 Leader -> Leader: 分解任务为子任务 A、B
-Leader -> Executor1: @小牛 [TASK:A] 查服务器状态
-Leader -> Executor2: @小花 [TASK:B] 查 API 用量
+Leader -> Executor1: @Bot-B [TASK:A] 查服务器状态
+Leader -> Executor2: @Bot-C [TASK:B] 查 API 用量
 Executor1 -> Leader: [DONE] 服务器状态正常, CPU 45%
 Executor2 -> Leader: [DONE] API 用量 120k tokens
 Leader -> 用户: 汇总报告
@@ -220,7 +220,7 @@ Leader 可以根据能力标签自动选择合适的 Executor。
 ```ini
 # /etc/systemd/system/hermes-bot-a.service
 [Unit]
-Description=Hermes Bot A (小马)
+Description=Hermes Bot A (Bot A)
 After=network.target
 
 [Service]
@@ -238,7 +238,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/hermes-bot-b.service
 [Unit]
-Description=Hermes Bot B (小牛)
+Description=Hermes Bot B (Bot B)
 After=network.target
 
 [Service]
