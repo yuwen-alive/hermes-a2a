@@ -112,14 +112,15 @@
 112|
 113|### 文档导航
 114|
-115|| 我想... | 去看 |
-116||---------|------|
-117|| 从零搭建飞书 Bot-to-Bot | [feishu/setup-guide.md](feishu/setup-guide.md) |
-118|| 了解协议规范 | [protocol/spec.md](protocol/spec.md) |
-119|| 学习防死循环机制 | [protocol/anti-loop.md](protocol/anti-loop.md) |
-120|| 看看踩过的坑 | [docs/troubleshooting.md](docs/troubleshooting.md) |
-121|| 了解多 Agent 架构 | [docs/architecture.md](docs/architecture.md) |
-122|| 安装 Skill 包 | [skills/hermes-a2a/SKILL.md](skills/hermes-a2a/SKILL.md) |
+| 我想... | 去看 |
+|---------|------|
+| **新手入门（推荐）** | **[docs/user-manual.md](docs/user-manual.md)** |
+| 从零搭建飞书 Bot-to-Bot | [feishu/setup-guide.md](feishu/setup-guide.md) |
+| 了解协议规范 | [protocol/spec.md](protocol/spec.md) |
+| 学习防死循环机制 | [protocol/anti-loop.md](protocol/anti-loop.md) |
+| 看看踩过的坑 | [docs/troubleshooting.md](docs/troubleshooting.md) |
+| 了解多 Agent 架构 | [docs/architecture.md](docs/architecture.md) |
+| 安装 Skill 包 | [skills/hermes-a2a/SKILL.md](skills/hermes-a2a/SKILL.md) |
 123|
 124|---
 125|
@@ -182,14 +183,15 @@
 182|
 183|### Documentation
 184|
-185|| I want to... | Go to |
-186||--------------|-------|
-187|| Set up Feishu Bot-to-Bot from scratch | [feishu/setup-guide.md](feishu/setup-guide.md) |
-188|| Read the protocol spec | [protocol/spec.md](protocol/spec.md) |
-189|| Understand anti-loop mechanisms | [protocol/anti-loop.md](protocol/anti-loop.md) |
-190|| See common pitfalls | [docs/troubleshooting.md](docs/troubleshooting.md) |
-191|| Learn about multi-Agent architecture | [docs/architecture.md](docs/architecture.md) |
-192|| Install the Skill package | [skills/hermes-a2a/SKILL.md](skills/hermes-a2a/SKILL.md) |
+| I want to... | Go to |
+|--------------|-------|
+| **Getting Started (Recommended)** | **[docs/user-manual.md](docs/user-manual.md)** |
+| Set up Feishu Bot-to-Bot from scratch | [feishu/setup-guide.md](feishu/setup-guide.md) |
+| Read the protocol spec | [protocol/spec.md](protocol/spec.md) |
+| Understand anti-loop mechanisms | [protocol/anti-loop.md](protocol/anti-loop.md) |
+| See common pitfalls | [docs/troubleshooting.md](docs/troubleshooting.md) |
+| Learn about multi-Agent architecture | [docs/architecture.md](docs/architecture.md) |
+| Install the Skill package | [skills/hermes-a2a/SKILL.md](skills/hermes-a2a/SKILL.md) |
 193|
 194|### License
 195|
